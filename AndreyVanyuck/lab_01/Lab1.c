@@ -2,7 +2,7 @@
 #include <math.h>
 #include <locale.h>
 
-void main() {
+int main() {
 	setlocale(LC_ALL, "Russian");
 
 	int k, cube, temp, a;
@@ -10,7 +10,7 @@ void main() {
 	int count;   // кол-во цифр в числе 
 
 	printf("Enter k:");
-	scanf_s("%d", &k);
+	scanf("%d", &k);
 	printf("Out sequence:");
 
 	for (int i = 1; num < k; i++) {
