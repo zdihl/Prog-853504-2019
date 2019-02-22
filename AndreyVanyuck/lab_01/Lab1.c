@@ -3,8 +3,6 @@
 #include <locale.h>
 
 int main() {
-	setlocale(LC_ALL, "Russian");
-
 	int k, cube, temp, a;
 	int num = 0; //номер цифры числа в последовательности
 	int count;   // кол-во цифр в числе 
