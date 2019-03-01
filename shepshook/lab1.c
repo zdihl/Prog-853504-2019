@@ -2,26 +2,30 @@
 #include <limits.h>
 
 int main() {
-	int fib[100];
-	fib[0] = 1;
-	fib[1] = 1;
+	int fib0 = 1;
+	int fib1 = 1;
+	int fib2;
 	int i = 2;
-	while (fib[i - 1] < UCHAR_MAX) {
-		fib[i] = fib[i - 1] + fib[i - 2];
+	while (fib1 < UCHAR_MAX) {
+		fib2 = fib1 + fib0;
+		fib0 = fib1;
+		fib1 = fib2;
 		i++;
 	}
-	printf("Maximum number %d: %d\n", i - 2, fib[i - 2]);
+	printf("Maximum number %d: %d\n", i - 2, fib0);
 
 	long long mult = 1;
-	i = 2;
+	fib0 = 1;
+	fib1 = 1;
 	while (mult < INT_MAX) {
-		fib[i] = fib[i - 1] + fib[i - 2];
-		
-		mult *= fib[i];
+		fib2 = fib1 + fib0;
+		mult *= fib2;
+
+		fib0 = fib1;
+		fib1 = fib2;
 		i++;
 	}
-	printf("Maximum multiplication: %lld\n", mult / fib[i - 1]);
+	printf("Maximum multiplication: %lld\n", mult / fib2);
 
-	getch();
 	return 0;
 }
