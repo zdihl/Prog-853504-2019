@@ -1,5 +1,3 @@
-//variant 31
-
 #include <stdio.h>
 #include <limits.h>
 
