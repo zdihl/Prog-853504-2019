@@ -8,7 +8,7 @@
 
 int main(int argc, _TCHAR* argv[])
 {
-	int Ostatok, k;
+	int Ostatok, k,  numeral;
 	scanf("%d", &k);
 	if (k == 0 || k > 179)
 	{
