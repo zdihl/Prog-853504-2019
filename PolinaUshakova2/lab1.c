@@ -10,13 +10,13 @@ int Сheck();
 int main(int argc, _TCHAR* argv[])
 {
 	int Ostatok, k;
-	scanf("%d", numeral&k);
+	scanf("%d", &k);
 	if (k == 0 || k >176)
 	{
 		printf("Error");
 		getch();
 		return 0;
-	}
+	}numeral
 	Ostatok = k % 2;
 	if (!Ostatok)       //если четный столбец
 	{
