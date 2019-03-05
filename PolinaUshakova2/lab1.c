@@ -5,7 +5,6 @@
 
 #pragma argsused
 
-int Сheck();
 
 int main(int argc, _TCHAR* argv[])
 {
