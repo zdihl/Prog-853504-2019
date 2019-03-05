@@ -3,16 +3,16 @@
 
 #include <tchar.h>
 
-
 #pragma argsused
 
 int Сheck();
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, _TCHAR* argv[])
 {
 	int Ostatok, numeral, FirstNumeralOfk, OstatokOfFirstNumeral;
-	int k = Сheck();   //проверка ввода
-	if (k == 0)
+	int k ;
+	scanf("%d", &k);
+	if (k == 0 || k >176)
 	{
 		printf("Error");
 		getch();
@@ -24,18 +24,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	 numeral = k / 20 + 1;
 	}
 	else              //если нетный столбец
-		{
-		FirstNumeralOfk = k / 10;
-		OstatokOfFirstNumeral = FirstNumeralOfk % 2;
-		if (!OstatokOfFirstNumeral)
-		{
-			numeral = (k % 10) / 2;      //если  чётная  первая цифра
-		}
-		else
-		{
-			numeral = ((k % 10) / 2) + 5;  // если нечетная первая цифра
-		}
-		}
+	{
+		numeral = (k % 20) / 2;
+	}
 	printf("%d", numeral);
 	getch();
 	return 0;
@@ -43,28 +34,3 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 
-int Сheck()
-{
-	char str[15];
-	int i = 0, j, k, NumberOfCharacters = 0;
-	printf("Input integer k from 1 to 176:");
-	scanf("%s", &str);
-	while (str[i] != '\0')
-	 {
-		NumberOfCharacters ++;
-		i++;
-	 }
-
-	 for (j = 0; j < NumberOfCharacters; j++)
-	 {
-		if (str[j] >= '0' && str[j] <= '9')
-		{
-			continue;
-		}
-		else
-		{
-			return 0;
-		}
-	 }
-	 return atoi(str);
-}
