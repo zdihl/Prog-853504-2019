@@ -9,9 +9,8 @@ int Сheck();
 
 int main(int argc, _TCHAR* argv[])
 {
-	int Ostatok, numeral, FirstNumeralOfk, OstatokOfFirstNumeral;
-	int k ;
-	scanf("%d", &k);
+	int Ostatok, k;
+	scanf("%d", numeral&k);
 	if (k == 0 || k >176)
 	{
 		printf("Error");
