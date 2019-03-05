@@ -11,7 +11,7 @@ int main(int argc, _TCHAR* argv[])
 {
 	int Ostatok, k;
 	scanf("%d", &k);
-	if (k == 0 || k >176)
+	if (k == 0 || k > 179)
 	{
 		printf("Error");
 		getch();
