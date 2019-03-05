@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <limits.h>
 
 int main()
@@ -18,9 +17,8 @@ int main()
 			sum+=num;
 		}
 	}
-	printf("Nomer poslednego chisla: %d %s",counter,"\n");
-	printf("Poslednee chislo: %d %s",num,"\n");
-        printf("Summa chisel: %d",sum,"\n");
-	getch();
+	printf("Nomer poslednego chisla: %d \n",counter);
+	printf("Poslednee chislo: %d \n",num);
+	printf("Summa chisel: %d \n",sum);
 	return 0;
 }
