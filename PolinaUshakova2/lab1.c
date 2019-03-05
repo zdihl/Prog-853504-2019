@@ -16,7 +16,7 @@ int main(int argc, _TCHAR* argv[])
 		printf("Error");
 		getch();
 		return 0;
-	}numeral
+	}
 	Ostatok = k % 2;
 	if (!Ostatok)       //если четный столбец
 	{
