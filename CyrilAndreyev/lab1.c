@@ -4,7 +4,6 @@
 #pragma argsused
 
 #include <stdio.h>
-#include <conio.h>
 
 #ifdef _WIN32
 #include <tchar.h>
@@ -20,7 +19,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	scanf_s("%lli", &x);
 	if ((x < 100) || (x > 9999)) {
 		printf("Invalid input!");
-		getch();
 		return 0;
 	}
 	if (x / 1000) {
@@ -39,6 +37,5 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		printf("%hi", pr);
 	}
-    getch();
 	return 0;
 }
