@@ -16,9 +16,9 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	long long int x;
 	printf("x = ");
-	scanf_s("%lli", &x);
+	scanf("%lli", &x);
 	if ((x < 100) || (x > 9999)) {
-		printf("Invalid input!");
+		printf("Invalid input!\n");
 		return 0;
 	}
 	if (x / 1000) {
@@ -27,7 +27,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			sum += x % 10;
 			x /= 10;
 		}
-		printf("%hi", sum);
+		printf("%hi\n", sum);
 	}
 	else {
 		short int pr = 1;
@@ -35,7 +35,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			pr *= x % 10;
 			x /= 10;
 		}
-		printf("%hi", pr);
+		printf("%hi\n", pr);
 	}
 	return 0;
 }
