@@ -1,18 +1,8 @@
 /* Variant 1 */
 
-#pragma hdrstop
-#pragma argsused
-
 #include <stdio.h>
 
-#ifdef _WIN32
-#include <tchar.h>
-#else
-  typedef char _TCHAR;
-  #define _tmain main
-#endif
-
-int _tmain(int argc, _TCHAR* argv[]) 
+int main() 
 {
 	long long int x;
 	printf("x = ");
@@ -21,7 +11,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		printf("Invalid input!\n");
 		return 0;
 	}
-	if (x / 1000) {
+	if (x > 999) {
 		short int sum = 0;
 		while (x) {
 			sum += x % 10;
