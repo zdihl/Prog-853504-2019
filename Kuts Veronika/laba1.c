@@ -13,8 +13,7 @@ int _tmain()
 	   {
 		  p=p+p;
 	   }
-
-	   u++;
+           u++;
 	   v=p;
 	}
 	u=u-1;
