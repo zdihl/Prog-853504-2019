@@ -48,11 +48,11 @@ int _tmain()
 		printf("h=%d\n",h);
 		printf("t=%d\n",t);
 	}
-	 if(t<h)
+	if(t<h)
 	{
 		printf("h=%d\n",h);
 	}
-	 else if(t>h)
+	else if(t>h)
 	{
 		printf("t=%d\n",t);
 	}
