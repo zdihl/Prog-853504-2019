@@ -1,11 +1,23 @@
 int _tmain()
 {
-	double b;
-	int f=0,l,h=0,i,n,o,k,t=0,u;
+	double b,p=0;
+	int f=0,l,h=0,i,n,o,k,t=0,u=0,v;
 	printf("Vvedite veschestvennoe chislo: ");
 	scanf("%lf",&b);
-	printf("Chisel posle tochki: ");
-	scanf("%d",&u);
+	p=b;
+	v=b;
+	while (p>0.0000000000000001)
+	{
+	   p=p-v;
+	   for (i=1; i < 10; i++)
+	   {
+		  p=p+p;
+	   }
+
+	   u++;
+	   v=p;
+	}
+	u=u-1;
 	n=b;
 	while(n/10)
 	{
@@ -27,24 +39,24 @@ int _tmain()
 	}
 	o=b;
 	for(i=0;i<u;i++)
-	{
-    k=o%10;
-	  t=t+k;
-	  o=o/10;
-  }
+	{      
+		k=o%10;
+		t=t+k;
+		o=o/10;
+	}
 	if(t==h)
 	{
-    printf("h=%d\n",h);
-	  printf("t=%d\n",t);
-  }
-	if(t<h)
+		printf("h=%d\n",h);
+		printf("t=%d\n",t);
+	}
+	 if(t<h)
 	{
-    printf("h=%d\n",h);
-  }
-	else if(t>h)
+		printf("h=%d\n",h);
+	}
+	 else if(t>h)
 	{
-    printf("t=%d\n",t);
-  }
-	 getch();
-	 return 0;
+		printf("t=%d\n",t);
+	}
+	getch();
+	return 0;
 }
