@@ -1,60 +1,37 @@
 int _tmain()
 {
-	double b,p=0;
-	int f=0,l,h=0,i,n,o,k,t=0,u=0,v;
+	double b;
+	int f=0,v=0,n;
 	printf("Vvedite veschestvennoe chislo: ");
 	scanf("%lf",&b);
-	p=b;
-	v=b;
-	while (p>0.0000000000000001)
-	{
-	   p=p-v;
-	   for (i=1; i < 10; i++)
-	   {
-		  p=p+p;
-	   }
-           u++;
-	   v=p;
-	}
-	u=u-1;
 	n=b;
-	while(n/10)
+	while(n!=0)
 	{
-		f++;
-		n=n/10;
+	        f=f+n%10;
+	        n=n/10;
 	}
-	f=f+1;
-	n=b;
-	printf("f=%d\n",f);
-	for(i=0;i<f;i++)
-	{
-		l=n%10;
-		h=h+l;
-		n=n/10;
-	}
-	for (i = 0; i < u; i++)
+	n=0;
+	v=b+1e-9;
+	b=b-v;
+	while (v!=0)
 	{
 		b=b*10;
+		v=b+1e-9;
+		n=n+v;
+		b=b-v;
 	}
-	o=b;
-	for(i=0;i<u;i++)
-	{      
-		k=o%10;
-		t=t+k;
-		o=o/10;
-	}
-	if(t==h)
+	if(f==n)
 	{
-		printf("h=%d\n",h);
-		printf("t=%d\n",t);
+		printf("n=%d\n",n);
+		printf("f=%d\n",f);
 	}
-	if(t<h)
+	if(f<n)
 	{
-		printf("h=%d\n",h);
+		printf("n=%d\n",n);
 	}
-	else if(t>h)
+	else if(f>n)
 	{
-		printf("t=%d\n",t);
+		printf("f=%d\n",f);
 	}
 	getch();
 	return 0;
