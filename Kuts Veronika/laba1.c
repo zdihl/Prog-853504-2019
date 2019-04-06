@@ -1,7 +1,7 @@
 int _tmain()
 {
 	double b;
-	int f=0,v=0,n;
+	int f=0,v,n;
 	printf("Vvedite veschestvennoe chislo: ");
 	scanf("%lf",&b);
 	n=b;
@@ -12,6 +12,12 @@ int _tmain()
 	}
 	n=0;
 	v=b+1e-9;
+	while (v==0)
+	{
+		b=b*10;
+		v=b+1e-9;
+		n=n+v;
+	}
 	while (v!=0)
 	{       
 		b=b-v;
