@@ -12,13 +12,12 @@ int _tmain()
 	}
 	n=0;
 	v=b+1e-9;
-	b=b-v;
 	while (v!=0)
-	{
+	{       
+		b=b-v;
 		b=b*10;
 		v=b+1e-9;
 		n=n+v;
-		b=b-v;
 	}
 	if(f==n)
 	{
