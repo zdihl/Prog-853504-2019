@@ -1,53 +1,100 @@
 int _tmain()
 {
-	double b;
-	int f=0,v,n,m=0;
+	double vvod;
+
+	int summa_do=0,int_vvod=0,m=0,summa_posle=0;
+
 	printf("Vvedite veschestvennoe chislo: ");
-	scanf("%lf",&b);
-	n=b;
-	while(n!=0)
+
+	scanf("%lf",&vvod);
+
+	int_vvod=vvod;
+
+	while(int_vvod!=0)
+
 	{
-	        f=f+n%10;
-	        n=n/10;
+
+			summa_do=summa_do+int_vvod%10;
+
+			int_vvod=int_vvod/10;
+
 	}
-	n=0;
-	v=b+1e-9;
-	while (v==0)
+
+	int_vvod=vvod+1e-9;
+
+	while (int_vvod==0)
+
 	{
-		b=b*10;
-		v=b+1e-9;
-		n=n+v;
+
+		vvod=vvod*10;
+
+		int_vvod=vvod+1e-9;
+
+		summa_posle=summa_posle+int_vvod;
+
 	}
-	while (v!=0)
-	{       
-		b=b-v;
-		b=b*10;
-		v=b+1e-9;
-		while (v==0)
-	        {
-	           b=b*10;
-		   v=b+1e-9;
+
+	while (int_vvod!=0)
+
+	{
+
+		vvod=vvod-int_vvod;
+
+		vvod=vvod*10;
+
+		int_vvod=vvod+1e-9;
+
+		while (int_vvod==0)
+
+		{
+
+		   vvod=vvod*10;
+
+		   int_vvod=vvod+1e-9;
+
 		   m++;
+
 		   if (m==6)
+
 		   {
+
 			   break;
+
 		   }
+
 		}
-		n=n+v;
+
+		summa_posle=summa_posle+int_vvod;
+
 	}
-	if(f==n)
+
+	if(summa_do==summa_posle)
+
 	{
-		printf("summa cifr posle tochki: %d\n",n);
-		printf("summa cifr do tochki: %d\n",f);
+
+		printf("summa cifr posle tochki: %d\n",summa_posle);
+
+		printf("summa cifr do tochki: %d\n",summa_do);
+
 	}
-	if(f<n)
+
+	if(summa_do<summa_posle)
+
 	{
-		printf("summa cifr posle tochki: %d\n",n);
+
+		printf("summa cifr posle tochki: %d\n",summa_posle);
+
 	}
-	else if(f>n)
+
+	else if(summa_do>summa_posle)
+
 	{
-		printf("summa cifr do tochki: %d\n",f);
+
+		printf("summa cifr do tochki: %d\n",summa_do);
+
 	}
+
 	getch();
+
 	return 0;
 }
